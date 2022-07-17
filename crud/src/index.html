@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <header class="crud__header">
+
+    </header>
+    <main class="crud__main">
+        <div class="container">
+            <div class="crud__control">
+                <button class="button button_primary crud__buttonCreate">
+                    Создать пост
+                </button>
+            </div>
+            <div class="crud__posts">
+                <article class="crud__post">
+                    <header class="post__header">
+                        <div class="post__header-avatar">
+                            <img class="avatar" src="" alt="#" />
+                        </div>
+                        <div class="post__header-info">
+                            <span class="post__header-bio post__text">Ilya Yarn</span>
+                            <span class="post__header-rank post__text">Ilya Yarn new Date()</span>
+                        </div>
+                    </header>
+                    <div class="post__content">
+                        Some Text
+                    </div>
+                </article>
+                <article class="crud__createForm crud__post">
+                    <div class="crud__createForm__wrapper-icon">
+                        <img src='./assets/icons/handleDelete.svg' class="crud__createForm-icon"
+                            data-element="handleDelete" alt="delete" />
+                    </div>
+                    <form onSubmit={onSubmit} class="form-group crud__form-control" data-element="productForm">
+                        <div class="form-group__input ">
+                            <input class="form-group__control crud__createForm-input" name="text" type="text" required
+                                placeholder="Что происходит?">
+                        </div>
+                        <footer class="post__footer">
+                            <button name="save" class="button button_primary">
+                                Опубликовать
+                            </button>
+                        </footer>
+                    </form>
+                </article>
+                <article class="crud__post crud__post-page">
+                    <header class="post__header">
+                        <div class="post__header-avatar">
+                            <img class="avatar" src="" alt="#" />
+                        </div>
+                        <div class="post__header-info">
+                            <span class="post__header-bio">Ilya Yarn</span>
+                            <span class="post__header-rank">Ilya Yarn</span>
+                        </div>
+                    </header>
+                    <div class="post__content">
+                        Some Text
+                    </div>
+                    <footer class="post__footer">
+                        <button name="delete" class="button button_primary button_primary-delete">
+                            Удалить
+                        </button>
+                        <button name="save" class="button button_primary button_primary-edit">
+                            Редактировать
+                        </button>
+                    </footer>
+                </article>
+                <article class="crud__post crud__post-page_edit">
+                    <header class="post__header-edit">
+                        <span class="post__header-edit">Редактировать публикацию</span>
+                        <div class="crud__createForm__wrapper-icon">
+                            <img src='./assets/icons/handleDelete.svg' class="crud__createForm-icon"
+                                data-element="handleDelete" alt="delete" />
+                        </div>
+                    </header>
+                    <form onSubmit={onSubmit} class="form-group crud__form" data-element="productForm">
+                        <label for="edit">
+                            <div class="post__header-avatar">
+                                <img class="avatar" src="" alt="#" />
+                            </div>
+                        </label>
+                        <div class="form-group__input ">
+                            <input class="form-group__control crud__createForm-input" name="edit" type="text" required
+                                placeholder="Что происходит?" />
+                        </div>
+                        <footer class="post__footer">
+                            <button name="save" class="button button_primary">
+                                Сохранить
+                            </button>
+                        </footer>
+                    </form>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer class="crud__footer">
+
+    </footer>
+</body>
+
+</html>
